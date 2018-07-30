@@ -172,7 +172,7 @@ def main():
 
     compiler_dir = ''.join((compiler_name, compiler_year, compiler_bits_string))
 
-    qt_bin_path = os.path.join(os.environ.get('QT_BASE_PATH'), compiler_dir, 'bin')
+    qt_bin_path = os.path.join(os.environ['QT_BASE_PATH'], compiler_dir, 'bin')
     os.environ['PATH'] = os.pathsep.join((os.environ['PATH'], qt_bin_path))
 
     with open('setup.cfg', 'w') as cfg:
