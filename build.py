@@ -249,7 +249,7 @@ plat-name = {plat_name}'''.format(**locals()))
     for platform_plugin in ('minimal',):
         shutil.copy(
             os.path.join(
-                os.environ['QT_BASE_PATH'],
+                os.environ[QT_BASE_PATH],
                 compiler_dir,
                 'plugins',
                 'platforms',
