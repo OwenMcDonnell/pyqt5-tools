@@ -97,7 +97,8 @@ init:
   - ps: if (Get-ChildItem Env:ENABLE_RDP -ErrorAction SilentlyContinue) {iex ((new-object net.webclient).DownloadString('https://raw.githubusercontent.com/appveyor/ci/master/scripts/enable-rdp.ps1'))} else {echo RDP not enabled}
 
 build_script:
-  - ps: gci env:
+  - ps: |
+      gci env:
   - "%PYTHON%%PYTHON_SUFFIX%\\python venv.py"
   - copy "%PYTHON%%PYTHON_SUFFIX%\\python3.dll" "venv\\Scripts"
   - "venv\\Scripts\\python -m pip freeze"
