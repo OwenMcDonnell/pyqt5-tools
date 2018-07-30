@@ -582,4 +582,5 @@ For a local copy see:
 
 
 if __name__ == '__main__':
+    print os.environ
     sys.exit(main())
