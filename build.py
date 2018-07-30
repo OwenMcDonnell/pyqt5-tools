@@ -121,6 +121,7 @@ def callers_line_info():
 
 
 def main():
+    print(os.environ)
     bits = int(platform.architecture()[0][0:2])
     python_major_minor = '{}{}'.format(
         sys.version_info.major,
@@ -582,5 +583,5 @@ For a local copy see:
 
 
 if __name__ == '__main__':
-    print(os.environ)
+    
     sys.exit(main())
